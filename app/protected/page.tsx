@@ -3,6 +3,7 @@ import { createClient } from '@/utils/supabase/server'
 import { redirect } from 'next/navigation'
 import { fetchDailyBibleVerse } from '@/lib/verse'
 import { getWeeklyMotto } from '@/lib/motto'
+import Calendar from '@/components/Calendar'
 
 
 export default async function ProtectedPage() {
@@ -44,6 +45,11 @@ export default async function ProtectedPage() {
           <h2 className="text-xl font-semibold mb-2">🏴‍☠️ Motto gildii tygodnia</h2>
           <p className="italic">{motto}</p>
           </section>
+
+            <section className="bg-foreground/5 p-4 rounded-xl shadow">
+            <h2 className="text-xl font-semibold mb-2">🗓️ Kalendarz wydarzeń</h2>
+            <Calendar userId={user.id} />
+            </section>
         </main>
       </div>
 
