@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { SubmitButton } from "./submit-button"
-import { signIn, signUp } from "./actions"
+import { signIn } from "./actions"
 
 export default function Login({ searchParams }: { searchParams: { message: string } }) {
   return (
