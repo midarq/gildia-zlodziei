@@ -4,6 +4,7 @@ import { redirect } from 'next/navigation'
 import { fetchDailyBibleVerse } from '@/lib/verse'
 import { getWeeklyMotto } from '@/lib/motto'
 import Calendar from '@/components/Calendar'
+import Link from 'next/link'
 
 
 export default async function ProtectedPage() {
@@ -50,6 +51,16 @@ export default async function ProtectedPage() {
             <h2 className="text-xl font-semibold mb-2">🗓️ Kalendarz wydarzeń</h2>
             <Calendar userId={user.id} />
             </section>
+
+            <section className="text-center">
+             <Link
+              href="/protected/kuchnia"
+              className="inline-block mt-4 text-sm underline text-blue-600 hover:text-blue-400"
+            >
+              🍽️ Zajrzyj do przepisów kulinarnych złodzieja
+            </Link>
+</section>
+
         </main>
       </div>
 
