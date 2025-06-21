@@ -40,3 +40,40 @@
     transform: translateY(0);
   }
 }
+
+/* FullCalendar adjustments */
+.fc {
+  font-family: inherit;
+  font-size: 0.875rem;
+  background-color: transparent;
+  color: var(--foreground);
+}
+
+.fc-daygrid-event {
+  background-color: #4b5563; /* slate-600 */
+  border: none;
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  color: white;
+}
+
+.fc-toolbar-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.fc-daygrid-day-number {
+  color: #9ca3af; /* gray-400 */
+}
+/* Force weekday header color */
+.fc .fc-col-header-cell-cushion {
+  color: hsl(var(--foreground)) !important;
+  font-weight: 600;
+}
+
+/* Optional: slightly darker background */
+.fc .fc-col-header {
+  background-color: hsl(var(--background) / 0.8) !important;
+  border-bottom: 1px solid hsl(var(--foreground) / 0.2);
+}
